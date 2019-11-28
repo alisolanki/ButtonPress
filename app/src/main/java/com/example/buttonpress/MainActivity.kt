@@ -5,7 +5,6 @@ import android.os.Bundle
 import android.widget.Button
 import android.widget.SeekBar
 import android.widget.TextView
-import kotlinx.android.synthetic.*
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlin.random.Random
 
@@ -25,14 +24,15 @@ class MainActivity : AppCompatActivity() {
             rand = Random.nextInt(seekBar.progress)
             resultsTextView.text = rand.toString()
             textView.text = temp.toString()
-            textView4.setText("")
-            textView5.setText("")
+            textView4.text = ""
+            textView5.text = ""
         }
         imageButton.setOnClickListener {
-            textView4.setText("Press the roll button to get a random number between 0 and the number selected on the bar (max 20).")
-            textView5.setText("Developed by Ali Solanki")
-            resultsTextView.setText("")
-            textView.setText("")
+            textView4.text = "Press the roll button to get a random number between 0 and the number selected on the bar (max 20)."
+            textView5.text = "Developed by Ali Solanki"
+            resultsTextView.text = ""
+            textView.text = ""
         }
+
     }
 }

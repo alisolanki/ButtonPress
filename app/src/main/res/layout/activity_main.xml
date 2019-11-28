@@ -32,16 +32,19 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
             android:layout_marginLeft="8dp"
+            android:layout_marginTop="32dp"
             android:layout_marginEnd="8dp"
             android:layout_marginRight="8dp"
-            android:layout_marginBottom="24dp"
+            android:layout_marginBottom="8dp"
             android:text="How Much?"
             android:textColor="#03A9F4"
             android:textSize="24sp"
             app:layout_constraintBottom_toTopOf="@+id/seekBar"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="parent" />
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView4"
+            app:layout_constraintVertical_bias="1.0" />
 
     <View
             android:id="@+id/divider"
@@ -71,22 +74,6 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView4" />
-
-    <SeekBar
-            android:id="@+id/seekBar"
-            style="@style/Widget.AppCompat.SeekBar.Discrete"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"
-            android:layout_marginLeft="8dp"
-            android:layout_marginEnd="8dp"
-            android:layout_marginRight="8dp"
-            android:layout_marginBottom="24dp"
-            android:max="21"
-            android:progress="3"
-            app:layout_constraintBottom_toTopOf="@+id/rollButton"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
             android:id="@+id/textView"
@@ -150,7 +137,6 @@
             android:layout_marginTop="8dp"
             android:layout_marginEnd="8dp"
             android:layout_marginRight="8dp"
-            android:layout_marginBottom="8dp"
             android:background="@drawable/bg_roll"
             android:soundEffectsEnabled="true"
             android:tint="#000000"
@@ -179,4 +165,34 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
+
+    <com.xw.repo.BubbleSeekBar
+            android:id="@+id/seekBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginBottom="24dp"
+            app:layout_constraintBottom_toTopOf="@+id/rollButton"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:bsb_auto_adjust_section_mark="true"
+            app:bsb_second_track_color="@color/colorAccent"
+            app:bsb_section_count="5"
+            app:bsb_section_text_position="below_section_mark"
+            app:bsb_show_section_mark="true"
+            app:bsb_show_section_text="true"
+            app:bsb_show_thumb_text="true"
+            app:bsb_thumb_text_size="18sp"
+            app:bsb_touch_to_seek="true"
+
+            android:layout_marginTop="8dp"
+            app:bsb_bubble_text_color="@color/colorPrimaryDark"
+            app:bsb_max="50.0"
+            app:bsb_min="0"
+            app:bsb_progress="3"
+            app:bsb_show_progress_in_float="true"/>
+
 </androidx.constraintlayout.widget.ConstraintLayout>
