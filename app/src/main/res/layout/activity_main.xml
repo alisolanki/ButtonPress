@@ -35,7 +35,7 @@
             android:layout_marginTop="32dp"
             android:layout_marginEnd="8dp"
             android:layout_marginRight="8dp"
-            android:layout_marginBottom="8dp"
+            android:layout_marginBottom="48dp"
             android:text="How Much?"
             android:textColor="#03A9F4"
             android:textSize="24sp"
@@ -67,13 +67,13 @@
             android:layout_marginTop="8dp"
             android:layout_marginEnd="8dp"
             android:layout_marginRight="8dp"
-            android:layout_marginBottom="24dp"
             android:textColor="#00FA0B"
             android:textSize="96sp"
             app:layout_constraintBottom_toTopOf="@+id/divider"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView4" />
+            app:layout_constraintTop_toBottomOf="@+id/textView4"
+            app:layout_constraintVertical_bias="0.5" />
 
     <TextView
             android:id="@+id/textView"
@@ -82,14 +82,15 @@
             android:layout_marginStart="8dp"
             android:layout_marginLeft="8dp"
             android:layout_marginTop="8dp"
-            android:layout_marginBottom="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
             android:textColor="#CC00FF0B"
             android:textSize="24sp"
             app:layout_constraintBottom_toTopOf="@+id/divider"
             app:layout_constraintEnd_toStartOf="@+id/resultsTextView"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView4"
-            app:layout_constraintVertical_bias="0.56" />
+            app:layout_constraintVertical_bias="0.5" />
 
     <TextView
             android:id="@+id/textView4"
@@ -107,26 +108,6 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView2" />
 
-    <TextView
-            android:id="@+id/textView5"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"
-            android:layout_marginLeft="8dp"
-            android:layout_marginTop="8dp"
-            android:layout_marginEnd="8dp"
-            android:layout_marginRight="8dp"
-            android:layout_marginBottom="8dp"
-            android:text="Developed by Ali Solanki"
-            android:textColor="#B3FFFFFF"
-            android:textSize="20sp"
-            app:layout_constraintBottom_toTopOf="@+id/resultsTextView"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="1.0"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView4"
-            app:layout_constraintVertical_bias="0.0" />
-
     <ImageButton
             android:id="@+id/imageButton"
             style="@style/Widget.AppCompat.ImageButton"
@@ -137,6 +118,7 @@
             android:layout_marginTop="8dp"
             android:layout_marginEnd="8dp"
             android:layout_marginRight="8dp"
+            android:layout_marginBottom="48dp"
             android:background="@drawable/bg_roll"
             android:soundEffectsEnabled="true"
             android:tint="#000000"
@@ -146,6 +128,31 @@
             app:layout_constraintStart_toEndOf="@+id/textView1"
             app:layout_constraintTop_toBottomOf="@+id/divider"
             app:srcCompat="@android:drawable/stat_notify_sync" />
+
+
+    <com.xw.repo.BubbleSeekBar
+            android:id="@+id/seekBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginBottom="8dp"
+            app:bsb_bubble_color="@color/roll_button"
+            app:bsb_bubble_text_color="#FFFFFF"
+            app:bsb_max="100"
+            app:bsb_progress="25"
+            app:bsb_second_track_color="@color/colorAccent"
+            app:bsb_section_text_position="bottom_sides"
+            app:bsb_show_progress_in_float="false"
+            app:bsb_show_thumb_text="true"
+            app:bsb_track_color="#00ACC1"
+            app:layout_constraintBottom_toTopOf="@+id/rollButton"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+
 
     <TextView
             android:id="@+id/textView2"
@@ -166,26 +173,28 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
-    <com.xw.repo.BubbleSeekBar
-            android:id="@+id/seekBar"
-            android:layout_width="match_parent"
+    <Button
+            android:id="@+id/button"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
             android:layout_marginLeft="8dp"
+            android:layout_marginTop="8dp"
             android:layout_marginEnd="8dp"
             android:layout_marginRight="8dp"
-            android:layout_marginBottom="24dp"
-            app:layout_constraintBottom_toTopOf="@+id/rollButton"
+            android:layout_marginBottom="8dp"
+            android:background="@drawable/bg_tagname"
+            android:text=" Developed By Ali Solanki "
+            android:textAllCaps="false"
+            android:textColor="#FFFFFF"
+            android:visibility="visible"
+            app:layout_constraintBottom_toTopOf="@+id/resultsTextView"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:bsb_auto_adjust_section_mark="true"
-            app:bsb_second_track_color="@color/colorAccent"
-            app:bsb_section_count="5"
-            app:bsb_section_text_position="below_section_mark"
-            app:bsb_show_section_mark="true"
-            app:bsb_show_section_text="true"
-            app:bsb_show_thumb_text="true"
-            app:bsb_thumb_text_size="18sp"
-            app:bsb_touch_to_seek="true"/>
+            app:layout_constraintTop_toBottomOf="@+id/textView4"
+            app:layout_constraintVertical_bias="0.0"
+            tools:visibility="visible" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
